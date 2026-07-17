@@ -1,0 +1,65 @@
+/* --- Fundo e Estilos Globais --- */
+.galaxy-bg {
+  min-height: 100vh;
+  background-color: #000000;
+  background-attachment: fixed;
+}
+
+/* --- Estilos de Componentes --- */
+.glass-panel {
+  padding: 1.5rem;
+  background: rgba(28, 30, 46, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(129, 140, 248, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-panel.active-card {
+  transform: scale(1.02);
+  border-color: #818CF8;
+  box-shadow: 0 0 25px rgba(129, 140, 248, 0.4), 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.summary-cards-container .glass-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-premium {
+  width: 100%; padding: 14px; border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #000000;
+  color: #FFFFFF; font-family: inherit; box-sizing: border-box;
+}
+
+.input-premium option {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.btn-primary { background: #818CF8; color: white; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+
+.btn-secondary { background: rgba(255, 255, 255, 0.1); color: #E2E8F0; border: 1px solid rgba(255, 255, 255, 0.15); padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+
+.tab-item { padding: 10px 4px; cursor: pointer; font-weight: 600; color: #94A3B8; border-bottom: 2px solid transparent; }
+.tab-item.active { color: #818CF8; border-bottom: 2px solid #818CF8; }
+
+.table-row { transition: background-color 0.2s; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+
+/* DatePicker Dark Mode */
+.react-datepicker-popper { z-index: 1050 !important; }
+.react-datepicker { background-color: #000000 !important; border: 1px solid rgba(255, 255, 255, 0.15) !important; font-family: inherit !important; border-radius: 12px !important; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6) !important; overflow: hidden; }
+.react-datepicker__header { background-color: #000000 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important; padding-top: 12px !important; }
+.react-datepicker__current-month, .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__month-text, .react-datepicker__year-text, .react-datepicker-year-header { color: #FFFFFF !important; }
+.react-datepicker__day--disabled { color: rgba(255, 255, 255, 0.2) !important; }
+.react-datepicker__day:hover:not(.react-datepicker__day--disabled), .react-datepicker__month-text:hover, .react-datepicker__year-text:hover { background-color: rgba(255, 255, 255, 0.1) !important; border-radius: 8px !important; color: #FFF !important; }
+.react-datepicker__day--selected, .react-datepicker__month-text--keyboard-selected, .react-datepicker__month-text--selected, .react-datepicker__year-text--selected { background-color: #818CF8 !important; color: white !important; font-weight: bold !important; border-radius: 8px !important; box-shadow: 0 0 10px rgba(129, 140, 248, 0.5) !important; }
+
+/* Animação do Modal */
+@keyframes slideUp { 
+    from { opacity: 0; transform: translateY(20px) scale(0.95); } 
+    to { opacity: 1; transform: translateY(0) scale(1); } 
+}
